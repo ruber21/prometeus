@@ -1,0 +1,24 @@
+{
+  "name": "prometeus",
+  "version": "0.0.1",
+  "description": "SCSS styles library",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch src/prometeus.scss -o build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruber21/prometeus.git"
+  },
+  "author": "Ruben Suarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruber21/prometeus/issues"
+  },
+  "homepage": "https://github.com/ruber21/prometeus#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.49.9"
+  }
+}
