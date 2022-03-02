@@ -1,0 +1,70 @@
+@import "../abstract/varables.scss";
+
+nav.nav-side{
+    position: fixed;
+    margin: 0px;
+    height: 100%;
+    padding: 40px;
+    background-image: linear-gradient($bg-secondary-color, $bg-primary-color);
+
+
+    &>a{
+        display: block;
+        color: $text-primary-color;
+        font-size: 30px;
+        text-decoration: none;
+        .menu-logo{
+            //width: 25px;
+            display: flex;
+            padding-bottom: 20px;
+            .logo{
+                margin-right: 10px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    menu{
+        margin: 0px;
+        padding: 0px;
+        
+
+        ul.main-menu-options{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            
+            &>li{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+                min-width: 180px;
+                margin: 0px;
+                color: $text-secondary-color;
+                cursor: pointer;
+                transition: all 0.5s;
+                &:hover{
+                    background-color: $bg-secondary-color;
+                }
+
+                &>i{
+                    width: 15%;
+                }
+                
+                &>div.menu-label{
+                    width: 82%;
+                    display: inline-block;
+                    //padding-left: 10px;
+                    align-items: stretch;
+                    &>span{
+                        display: inline-block;
+                        width: 85%;
+                    }
+                }
+                
+            }
+        }
+    }
+}

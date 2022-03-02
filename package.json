@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ruber21/prometeus#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "node-sass": "^7.0.1",
     "sass": "^1.49.9"
   }
