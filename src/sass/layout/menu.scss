@@ -1,0 +1,101 @@
+@import "../abstract/varables.scss";
+
+nav.nav-side{
+    position: fixed;
+    margin: 0px;
+    height: 100%;
+    padding: 40px 0px 40px 0px;
+    background-image: linear-gradient($bg-secondary-color, $bg-primary-color);
+
+
+    &>a{
+        display: block;
+        color: $text-primary-color;
+        font-size: 30px;
+        text-decoration: none;
+        .menu-logo{
+            //width: 25px;
+            display: flex;
+            padding-bottom: 20px;
+            .logo{
+                margin-left: 30px;
+                margin-right: 10px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+
+    menu{
+        margin: 0px;
+        padding: 0px;
+        
+
+        ul.main-menu-options{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            
+            &>li{
+
+                &.active{
+                    color: $text-primary-color;
+                    background: rgba(0, 0, 0, 0.15);
+                    div.main-menu-option{
+                        border-left: 7px solid $text-primary-color;
+                        .menu-label{
+                            &>i.fa.fa-chevron-down{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                
+                min-width: 250px;
+                margin: 0px;
+                color: $text-secondary-color;
+                .main-menu-option{
+                    cursor: pointer;
+                    padding: 10px;
+                    //margin-bottom: 10px;
+                    &:hover{
+                        background-color: $bg-secondary-color;
+                    }
+    
+                    &>i{
+                        width: 15%;
+                    }
+                    
+                    &>div.menu-label{
+                        width: 82%;
+                        display: inline-block;
+                        align-items: stretch;
+                        &>span{
+                            display: inline-block;
+                            width: 85%;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}
+
+.nav-side div.submenu{
+    //background:rgba(255, 255, 255, 0.03 );
+    
+    background:rgba(0, 0, 0, 0.2 );
+
+    
+    .submenu-options{
+        list-style: none;
+        padding-left: 20px;
+        &>li.sub-menu-option{
+            i{
+                margin-right: 10px;
+            }
+            padding: 10px;
+
+        }
+    }
+}

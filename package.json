@@ -4,7 +4,8 @@
   "description": "SCSS styles library",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --watch src/prometeus.scss -o build",
+    "sass": "node-sass --watch src/sass/prometeus.scss -o build",
+    "ts": "tsc ./src/ts/main.ts --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "font-awesome": "^4.7.0",
     "node-sass": "^7.0.1",
     "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
   }
 }
