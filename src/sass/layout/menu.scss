@@ -6,7 +6,22 @@ nav.nav-side{
     height: 100%;
     padding: 40px 0px 40px 0px;
     background-image: linear-gradient($bg-secondary-color, $bg-primary-color);
+    width: 60px;
+    overflow: hidden;
+    &:hover{
+        width: 300px;
 
+        div.submenu{
+            .submenu-options{
+                &>li.sub-menu-option{
+                    padding-left: 40px;
+                    i{
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
 
     &>a{
         display: block;
@@ -14,14 +29,16 @@ nav.nav-side{
         font-size: 30px;
         text-decoration: none;
         .menu-logo{
-            //width: 25px;
-            display: flex;
+            display: inline-flex;
             padding-bottom: 20px;
             .logo{
-                margin-left: 30px;
+                margin-left: 10px;
                 margin-right: 10px;
                 height: 40px;
                 width: 40px;
+            }
+            span{
+                padding-top: 5px;
             }
         }
     }
@@ -36,66 +53,74 @@ nav.nav-side{
             margin: 0px;
             padding: 0px;
             
-            &>li{
+            &>li.main-option-wrapper{
 
                 &.active{
                     color: $text-primary-color;
                     background: rgba(0, 0, 0, 0.15);
                     div.main-menu-option{
                         border-left: 7px solid $text-primary-color;
-                        .menu-label{
-                            &>i.fa.fa-chevron-down{
+                        &>i.left-icon{
+                            padding-left: 5px;
+                        }
+                    }
+                }
+
+                &.expanded{
+                    div.main-menu-option{
+                        &>i.fa.fa-chevron-down{
                                 transform: rotate(180deg);
-                            }
                         }
                     }
                 }
                 
-                min-width: 250px;
+                width: 300px;
                 margin: 0px;
                 color: $text-secondary-color;
                 .main-menu-option{
                     cursor: pointer;
                     padding: 10px;
-                    //margin-bottom: 10px;
+                    display: inline-flex;
+                    align-items: center;
                     &:hover{
                         background-color: $bg-secondary-color;
                     }
     
-                    &>i{
-                        width: 15%;
+                    &>i.left-icon{
+                        width: 50px;
+                        padding-left: 10px;
+                    }
+
+                    &>i.right-icon{
+                        width: 40px;
                     }
                     
                     &>div.menu-label{
-                        width: 82%;
-                        display: inline-block;
-                        align-items: stretch;
-                        &>span{
-                            display: inline-block;
-                            width: 85%;
-                        }
+                        width: 200px;
                     }
-                }                
+                }
             }
         }
     }
 }
 
 .nav-side div.submenu{
-    //background:rgba(255, 255, 255, 0.03 );
-    
-    background:rgba(0, 0, 0, 0.2 );
-
-    
+    overflow: hidden;
+    height: 0px;
     .submenu-options{
+        background:rgba(0, 0, 0, 0.2 );
         list-style: none;
-        padding-left: 20px;
+        padding-left: 0px;
         &>li.sub-menu-option{
-            i{
-                margin-right: 10px;
-            }
+            cursor: pointer;
             padding: 10px;
-
+            padding-left: 20px;
+            &:hover{
+                background-color: $bg-secondary-color;
+            }
+            i{
+                margin-right: 30px;
+            }
         }
     }
 }
