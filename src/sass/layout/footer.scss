@@ -1,0 +1,25 @@
+footer{
+    background-color: $bg-primary-color;
+    color: $text-primary-color;
+    padding-right: 50px;
+    padding-left: 80px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    .footer-content{
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footer-logo{
+            display: flex;
+            align-items: center;
+            img.logo{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+
+}

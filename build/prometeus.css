@@ -13,8 +13,29 @@ body {
 form {
   padding-top: 10px; }
 
+footer {
+  background-color: #0a061a;
+  color: #f5f5f5;
+  padding-right: 50px;
+  padding-left: 80px;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+  footer .footer-content {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    footer .footer-content .footer-logo {
+      display: flex;
+      align-items: center; }
+      footer .footer-content .footer-logo img.logo {
+        width: 40px;
+        height: 40px; }
+
 nav.nav-side {
   position: fixed;
+  z-index: 1000;
   margin: 0px;
   height: 100%;
   padding: 40px 0px 40px 0px;
