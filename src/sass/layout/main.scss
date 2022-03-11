@@ -1,0 +1,14 @@
+main.main-container{
+    background-image: linear-gradient($bg-secondary-color, $bg-primary-color);
+    height: 100%;
+    padding-bottom: 60px;
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-right: 20px;
+
+    div.background-image{
+        position: absolute;
+        opacity: 0.05;
+        left: -5%;
+    }
+}

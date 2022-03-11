@@ -7,11 +7,85 @@ body, html {
   width: 100%;
   height: 100%; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+p {
+  margin: 0; }
+
+.text-primary {
+  color: #f5f5f5; }
+
+.text-secondary {
+  color: #C8CCD8; }
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.15); }
+
+.pad-5 {
+  padding: 5px; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 form {
   padding-top: 10px; }
+
+.row {
+  width: 100%;
+  display: inline-flex; }
+  .row div.col {
+    padding: 0.5rem; }
+  .row .md-12 {
+    width: 100%; }
+  .row .md-11 {
+    width: 91.6666%; }
+  .row .md-10 {
+    width: 83.3333%; }
+  .row .md-9 {
+    width: 75%; }
+  .row .md-8 {
+    width: 66.6666%; }
+  .row .md-7 {
+    width: 58.3333%; }
+  .row .md-6 {
+    width: 50%; }
+  .row .md-5 {
+    width: 41.6666%; }
+  .row .md-4 {
+    width: 33.3333%; }
+  .row .md-3 {
+    width: 25%; }
+  .row .md-2 {
+    width: 16.6666%; }
+  .row .md-1 {
+    width: 8.3333%; }
+
+@media only screen and (max-width: 800px) {
+  .row {
+    display: initial; }
+    .row div.col {
+      width: 100%; } }
+
+div.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%; }
+
+main.main-container {
+  background-image: linear-gradient(#383c48, #0a061a);
+  height: 100%;
+  padding-bottom: 60px;
+  padding-left: 80px;
+  padding-top: 20px;
+  padding-right: 20px; }
+  main.main-container div.background-image {
+    position: absolute;
+    opacity: 0.05;
+    left: -5%; }
 
 footer {
   background-color: #0a061a;

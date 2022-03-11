@@ -5,8 +5,10 @@
 @import "./base/typography.scss";
 
 @import "./components/form.scss";
+@import "./components/row-column.scss";
+@import "./components/card.scss";
 
-@import "./layout/container.scss";
+@import "./layout/main.scss";
 @import "./layout/footer.scss";
 @import "./layout/header.scss";
 @import "./layout/menu.scss";
