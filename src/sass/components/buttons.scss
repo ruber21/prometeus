@@ -1,0 +1,197 @@
+button.btn{
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 0px 5px 5px 0px;
+    cursor: pointer;
+    &:disabled{
+        cursor: not-allowed;
+    }
+
+    &.btn-normal{
+        color: $text-primary-color;
+        &:hover{
+            filter: brightness(120%);
+        }
+        &:disabled{
+            filter: brightness(80%) !important;
+        }
+        &.btn-primary{
+            background-color: $primary;
+        }
+        &.btn-secondary{
+            background-color: $secondary;
+        }
+        &.btn-success{
+            background-color: $success;
+        }
+        &.btn-warning{
+            background-color: $warning;
+        }
+        &.btn-danger{
+            background-color: $danger;
+        }
+    }
+
+    &.btn-line{
+        background-color: transparent;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        &.btn-primary{
+            color: $primary;
+        }
+        &.btn-secondary{
+            color: $text-grayed-color
+        }
+        &.btn-success{
+            color: $success;
+        }
+        &.btn-warning{
+            color: $warning;
+        }
+        &.btn-danger{
+            color: $danger;
+        }
+        &:hover{
+            &.btn-primary{
+                background-color: $primary-transparent;
+            }
+            &.btn-secondary{
+                background-color: $secondary-transparent;
+            }
+            &.btn-success{
+                background-color: $success-transparent;
+            }
+            &.btn-warning{
+                background-color: $warning-transparent;
+            }
+            &.btn-danger{
+                background-color: $danger-transparent;
+            }
+        }
+        &:hover{
+            &:disabled{
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+button.btn-icon{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: none;
+    margin: 0px 5px 5px 0px;
+
+    cursor: pointer;
+    &:disabled{
+        cursor: not-allowed;
+    }
+
+    &.btn-icon-normal{
+        color: $text-primary-color;
+        &:hover{
+            filter: brightness(120%);
+        }
+        &:disabled{
+            filter: brightness(80%) !important;
+        }
+        &.btn-primary{
+            background-color: $primary;
+        }
+        &.btn-secondary{
+            background-color: $secondary;
+        }
+        &.btn-success{
+            background-color: $success;
+        }
+        &.btn-warning{
+            background-color: $warning;
+        }
+        &.btn-danger{
+            background-color: $danger;
+        }
+    }
+
+    &.btn-icon-line{
+        background-color: transparent;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1px;
+        &.btn-primary{
+            color: $primary;
+        }
+        &.btn-secondary{
+            color: $text-grayed-color
+        }
+        &.btn-success{
+            color: $success;
+        }
+        &.btn-warning{
+            color: $warning;
+        }
+        &.btn-danger{
+            color: $danger;
+        }
+        &:hover{
+            &.btn-primary{
+                background-color: $primary-transparent;
+            }
+            &.btn-secondary{
+                background-color: $secondary-transparent;
+            }
+            &.btn-success{
+                background-color: $success-transparent;
+            }
+            &.btn-warning{
+                background-color: $warning-transparent;
+            }
+            &.btn-danger{
+                background-color: $danger-transparent;
+            }
+        }
+        &:disabled{
+            &:hover{
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+
+.btn{
+    &.shadow-primary{
+        box-shadow: 0px 0px 10px $primary;
+    }
+    &.shadow-secondary{
+        box-shadow: 0px 0px 10px $secondary;
+    }
+    &.shadow-warning{
+        box-shadow: 0px 0px 10px $warning;
+    }
+    &.shadow-danger{
+        box-shadow: 0px 0px 10px $danger;
+    }
+    &.shadow-success{
+        box-shadow: 0px 0px 10px $success;
+    }
+}
+
+.btn-icon{
+    &.shadow-primary{
+        box-shadow: 0px 0px 10px $primary;
+    }
+    &.shadow-secondary{
+        box-shadow: 0px 0px 10px $secondary;
+    }
+    &.shadow-warning{
+        box-shadow: 0px 0px 10px $warning;
+    }
+    &.shadow-danger{
+        box-shadow: 0px 0px 10px $danger;
+    }
+    &.shadow-success{
+        box-shadow: 0px 0px 10px $success;
+    }
+}
