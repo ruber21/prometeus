@@ -81,36 +81,58 @@ form {
   display: inline-flex; }
   .row div.col {
     padding: 0.5rem; }
-  .row .md-12 {
-    width: 100%; }
-  .row .md-11 {
-    width: 91.6666%; }
-  .row .md-10 {
-    width: 83.3333%; }
-  .row .md-9 {
-    width: 75%; }
-  .row .md-8 {
-    width: 66.6666%; }
-  .row .md-7 {
-    width: 58.3333%; }
-  .row .md-6 {
-    width: 50%; }
-  .row .md-5 {
-    width: 41.6666%; }
-  .row .md-4 {
-    width: 33.3333%; }
-  .row .md-3 {
-    width: 25%; }
-  .row .md-2 {
-    width: 16.6666%; }
-  .row .md-1 {
-    width: 8.3333%; }
 
 @media only screen and (max-width: 800px) {
   .row {
     display: initial; }
     .row div.col {
+      width: 100%; }
+  .grid {
+    display: initial; }
+    .grid div.cell {
       width: 100%; } }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap; }
+  .grid div.cell {
+    padding: 0.5rem; }
+
+.md-12 {
+  width: 100%; }
+
+.md-11 {
+  width: 91.6666%; }
+
+.md-10 {
+  width: 83.3333%; }
+
+.md-9 {
+  width: 75%; }
+
+.md-8 {
+  width: 66.6666%; }
+
+.md-7 {
+  width: 58.3333%; }
+
+.md-6 {
+  width: 50%; }
+
+.md-5 {
+  width: 41.6666%; }
+
+.md-4 {
+  width: 33.3333%; }
+
+.md-3 {
+  width: 25%; }
+
+.md-2 {
+  width: 16.6666%; }
+
+.md-1 {
+  width: 8.3333%; }
 
 div.card {
   background: rgba(255, 255, 255, 0.05);
