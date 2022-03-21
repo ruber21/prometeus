@@ -1,0 +1,55 @@
+
+
+input,textarea{
+    padding: 7px;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $text-primary-color;
+    border-style: none;
+
+    &:disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    &[type=text]{
+        padding: 7px;
+    }
+    &:focus-visible{
+        outline: 1px solid $primary;
+    }
+
+    &.error{
+        border: 1px solid $danger;
+        &:focus-visible{
+            border: 1px solid $danger;
+            outline: 1px solid $danger;
+        }
+    }
+}
+
+div.input-icon{
+    color: $text-primary-color;
+    position: relative;
+    input{
+        &.left-icon{
+            padding-left: 35px;
+        }
+        &.right-icon{
+            padding-right: 35px;
+        }
+    }
+    i{
+        position: absolute;
+        &.left-icon{
+            padding-left: 5px;
+            padding-top: 7px;
+        }
+        &.right-icon{
+            right: 10px;
+            padding-top: 7px;
+        }
+    }
+}
+
