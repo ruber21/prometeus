@@ -53,3 +53,209 @@ div.input-icon{
     }
 }
 
+//////// Radio Buttons
+
+/* The container */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 27px;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        left: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        border-color: $text-grayed-color;
+        border-style: solid;
+        border-width: 2px;
+    }
+    
+    &:hover input ~ .checkmark {
+        border-color: $text-secondary-color;
+    }
+
+    input:checked ~ .checkmark {
+        background-color: $primary;
+        border-color: $text-primary-color;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .checkmark:after {
+        top: 3px;
+        left: 3px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: $text-primary-color;
+   }
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 19px;
+        width: 19px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        border-color: $text-grayed-color;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    &:hover input ~ .checkmark {
+        border-color: $text-secondary-color;
+    }
+
+    input:checked ~ .checkmark {
+        background-color: $primary;
+        border-style: none;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid $text-primary-color;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+.slider-switch {
+    position: relative;
+    display: inline-block;
+    height: 19px;
+    cursor: pointer;
+
+    input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &:hover{
+        .slider.round{
+            background-color: $bg-secondary-color;
+        }
+
+        input:checked + .slider.round {
+            background-color: $primary;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-transition: .4s;
+        transition: .4s;
+        width: 39px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 3px;
+            bottom: 2px;
+            background-color: $text-primary-color;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    input:checked + .slider {
+        background-color: $primary;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(19px);
+        -ms-transform: translateX(19px);
+        transform: translateX(19px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+      }
+      
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+    .slider-right-label{
+        padding-left: 32px;
+        bottom: 3px;
+        position: relative;
+    }
+
+    .slider-right{
+        left: auto;
+    }
+
+    .slider-left-label{
+        padding-right: 32px;
+        bottom: 3px;
+        position: relative;
+        padding-left: 0px;
+    }
+}
+

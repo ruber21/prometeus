@@ -8,6 +8,7 @@ export const DOM_ELEMENT = {
         MAIN_MENU_OPTION: 'main-menu-option',
         SUBMENU: 'submenu',
         EXPANDED: 'expanded',
-        ACTIVE: 'active'
+        ACTIVE: 'active',
+        DATEPICKER: 'datepicker',
     }
 };
