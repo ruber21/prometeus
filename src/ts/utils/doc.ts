@@ -1,4 +1,4 @@
-import {QUERY_ACCESORS, DOM_ELEMENT} from './constants'
+import {QUERY_ACCESORS, DOM_ELEMENT, EVENT} from './constants'
 
 export default class Doc {
     constructor(){};
@@ -30,6 +30,14 @@ export default class Doc {
 
     public static query(query: string): Element | null{
         return document.querySelector(query);
+    }
+
+    public static addClick(element: Element | Document, fn: any): void{
+        element.addEventListener(EVENT.CLICK, fn);
+    }
+
+    public static createDiv(): HTMLElement{
+        return document.createElement(DOM_ELEMENT.DIV);
     }
 }
 

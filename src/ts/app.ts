@@ -1,4 +1,5 @@
 import Datepicker from './components/datepicker';
+import Dropdown from './components/dropdown';
 import Menu from './layout/menu'
 export default class App{
     
@@ -6,12 +7,14 @@ export default class App{
 
     constructor(
         private menu: Menu,
-        private datepicker: Datepicker
+        private datepicker: Datepicker,
+        private dorpdown: Dropdown,
     ){}
 
     public boot(){
         this.menu.setup();
         this.datepicker.setup();
+        this.dorpdown.setup();
     }
 
 
