@@ -628,7 +628,7 @@ select.ui-datepicker-month {
   opacity: 0; }
 
 .select-items div:hover, .same-as-selected {
-  background-color: #383c48; }
+  background-color: #027eef; }
 
 main.main-container {
   background-image: linear-gradient(#383c48, #0a061a);
@@ -637,7 +637,8 @@ main.main-container {
   padding-bottom: 60px;
   padding-left: 80px;
   padding-top: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  overflow: hidden; }
   main.main-container div.background-image {
     position: absolute;
     opacity: 0.05;
