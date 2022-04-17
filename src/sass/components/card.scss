@@ -4,3 +4,23 @@ div.card{
     height: fit-content;
     width: 100%;
 }
+
+span.status{
+    padding: 1px 10px 1px 10px;
+    border-radius: 3px;
+    &.success{
+        background-color: $success;
+    }
+    &.primary{
+        background-color: $primary;
+    }
+    &.secondary{
+        background-color: $secondary;
+    }
+    &.warning{
+        background-color: $warning;
+    }
+    &.danger{
+        background-color: $danger;
+    }
+}

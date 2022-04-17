@@ -1,0 +1,52 @@
+div.table {
+  font-size: 14px;
+  div.table-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    width: 95%;
+    margin: auto;
+    font-size: 18px;
+    color: $text-secondary-color;
+    font-weight: bold;
+  }
+  table {
+    width: 95%;
+    margin: auto;
+    border-spacing: 0px;
+    padding-bottom: 10px;
+  }
+
+  thead {
+    color: $text-secondary-color;
+    tr th {
+      border: 1px solid $bg-secondary-color;
+      padding: 5px;
+      border-bottom: 0px;
+      border-right: 0px;
+      &:last-child {
+        border-right: 1px solid $bg-secondary-color;
+      }
+    }
+  }
+
+  tbody {
+    color: $text-primary-color;
+    tr {
+      td {
+        border: 1px solid $bg-secondary-color;
+        padding: 5px;
+        border-right: 0px;
+        border-bottom: 0px;
+        &:last-child {
+          border-right: 1px solid $bg-secondary-color;
+        }
+      }
+      &:last-child {
+        td {
+          border-bottom: 1px solid $bg-secondary-color;
+        }
+      }
+    }
+  }
+}
