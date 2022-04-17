@@ -9,6 +9,8 @@ export const DOM_ELEMENT = {
 
 export const TAG = {
     SELECT: 'select',
+    SPAN: 'span',
+    INPUT: 'input'
 };
 
 export const CLASS = {
@@ -23,12 +25,14 @@ export const CLASS = {
     SELECT_HIDE: 'select-hide',
     SAME_AS_SELECTED: 'same-as-selected',
     SELECT_ARROW_ACTIVE: 'select-arrow-active',
+    RANGE: 'range-wrapper'
 }
 
 
 
 export const EVENT = {
     CLICK: 'click',
+    CHANGE: 'change'
 }
 
 export const QUALIFIED_NAMES = {
