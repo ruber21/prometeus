@@ -1,0 +1,40 @@
+div.loader{
+    border: 8px solid $text-primary-color;
+    border-radius: 50%;
+    border-top: 8px solid $primary;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &.secondary{
+        border-top: 8px solid $secondary;
+    }
+    &.success{
+        border-top: 8px solid $success;
+    }
+    &.warning{
+        border-top: 8px solid $warning;
+    }
+    &.danger{
+        border-top: 8px solid $danger;
+    }
+    &.multi-color{
+        border-top: 8px solid $primary;
+        border-right: 8px solid $secondary;
+        border-bottom: 8x solid $bg-primary-color;
+        border-left: 8px solid $success;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,4 +1,4 @@
-import {DOM_ELEMENT, QUERY_ACCESORS} from '../utils/constants';
+import {CLASS, QUERY_ACCESORS} from '../utils/constants';
 import Doc from '../utils/doc';
 
 export default class Menu{
@@ -6,9 +6,9 @@ export default class Menu{
 
     private mainMenuOptionOnClick(element: Element){
         let parent = element.parentElement as Element;
-        const expanded = DOM_ELEMENT.CLASS.EXPANDED;
+        const expanded = CLASS.EXPANDED;
         let submenu = parent.querySelector(
-            `${QUERY_ACCESORS.CLASS}${DOM_ELEMENT.CLASS.SUBMENU}`
+            `${QUERY_ACCESORS.CLASS}${CLASS.SUBMENU}`
             ) as HTMLElement;
         if(parent.classList.contains(expanded)){
             parent.classList.remove(expanded);
@@ -22,7 +22,7 @@ export default class Menu{
 
     private setExpandClick(){
         let menuItems = Doc.getByClass(
-            `${DOM_ELEMENT.CLASS.MAIN_MENU_OPTION}`
+            `${CLASS.MAIN_MENU_OPTION}`
         );
         for(let i = 0; i < menuItems.length; i++){
             let option = menuItems.item(i);

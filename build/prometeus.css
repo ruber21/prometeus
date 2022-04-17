@@ -19,6 +19,10 @@ p {
   margin: 0;
   color: #f5f5f5; }
 
+label {
+  margin: 0;
+  color: #f5f5f5; }
+
 .text-center {
   text-align: center; }
 
@@ -139,6 +143,20 @@ div.card {
   border-radius: 10px;
   height: fit-content;
   width: 100%; }
+
+span.status {
+  padding: 1px 10px 1px 10px;
+  border-radius: 3px; }
+  span.status.success {
+    background-color: #018511; }
+  span.status.primary {
+    background-color: #027eef; }
+  span.status.secondary {
+    background-color: #434552; }
+  span.status.warning {
+    background-color: #eb9b34; }
+  span.status.danger {
+    background-color: #9c0000; }
 
 button.btn {
   padding: 8px 10px;
@@ -312,6 +330,420 @@ div.input-icon {
       right: 10px;
       padding-top: 7px; }
 
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 27px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0; }
+  .radio-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-color: #706666;
+    border-style: solid;
+    border-width: 2px; }
+  .radio-container:hover input ~ .checkmark {
+    border-color: #C8CCD8; }
+  .radio-container input:checked ~ .checkmark {
+    background-color: #027eef;
+    border-color: #f5f5f5; }
+  .radio-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  .radio-container .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #f5f5f5; }
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border-color: #706666;
+    border-style: solid;
+    border-width: 2px; }
+  .checkbox-container:hover input ~ .checkmark {
+    border-color: #C8CCD8; }
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #027eef;
+    border-style: none; }
+  .checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block; }
+  .checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #f5f5f5;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.slider-switch {
+  position: relative;
+  display: inline-block;
+  height: 19px;
+  cursor: pointer; }
+  .slider-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  .slider-switch:hover .slider.round {
+    background-color: #383c48; }
+  .slider-switch:hover input:checked + .slider.round {
+    background-color: #027eef; }
+  .slider-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 39px; }
+    .slider-switch .slider:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      left: 3px;
+      bottom: 2px;
+      background-color: #f5f5f5;
+      -webkit-transition: .4s;
+      transition: .4s; }
+  .slider-switch input:checked + .slider {
+    background-color: #027eef; }
+  .slider-switch input:checked + .slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px); }
+  .slider-switch .slider.round {
+    border-radius: 34px; }
+  .slider-switch .slider.round:before {
+    border-radius: 50%; }
+  .slider-switch .slider-right-label {
+    padding-left: 32px;
+    bottom: 3px;
+    position: relative; }
+  .slider-switch .slider-right {
+    left: auto; }
+  .slider-switch .slider-left-label {
+    padding-right: 32px;
+    bottom: 3px;
+    position: relative;
+    padding-left: 0px; }
+
+div.range-wrapper {
+  position: relative; }
+  div.range-wrapper span {
+    padding: 7px;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 100%;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f5f5f5;
+    border-style: none;
+    display: block;
+    text-align: center; }
+  div.range-wrapper input[type=range] {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px;
+    position: relative;
+    bottom: 9px;
+    left: -2px; }
+
+#ui-datepicker-div {
+  display: none;
+  background-color: #0a061a;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: none; }
+  #ui-datepicker-div table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+.ui-datepicker-calendar thead th {
+  padding: 0.25rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #C8CCD8; }
+
+.ui-datepicker-calendar tbody td {
+  width: 2.5rem;
+  text-align: center;
+  padding: 0; }
+
+.ui-datepicker-calendar tbody td a {
+  display: block;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  transition: 0.3s all;
+  color: #f5f5f5;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  margin: 3px; }
+
+.ui-datepicker-calendar tbody td a:hover {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.ui-datepicker-calendar tbody td a.ui-state-active {
+  background-color: #027eef;
+  color: #f5f5f5; }
+
+.ui-datepicker-header a.ui-corner-all {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  border-radius: 0.25rem;
+  transition: 0.3s all; }
+
+.ui-datepicker-header a.ui-corner-all:hover {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.ui-datepicker-header a.ui-datepicker-prev {
+  left: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-size: 0.5rem;
+  background-position: 50%;
+  transform: rotate(180deg); }
+
+.ui-datepicker-header a.ui-datepicker-next {
+  right: 0;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMyIgdmlld0JveD0iMCAwIDEzIDEzIj48cGF0aCBmaWxsPSIjNDI0NzcwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik03LjI4OCA2LjI5NkwzLjIwMiAyLjIxYS43MS43MSAwIDAgMSAuMDA3LS45OTljLjI4LS4yOC43MjUtLjI4Ljk5OS0uMDA3TDguODAzIDUuOGEuNjk1LjY5NSAwIDAgMSAuMjAyLjQ5Ni42OTUuNjk1IDAgMCAxLS4yMDIuNDk3bC00LjU5NSA0LjU5NWEuNzA0LjcwNCAwIDAgMS0xLS4wMDcuNzEuNzEgMCAwIDEtLjAwNi0uOTk5bDQuMDg2LTQuMDg2eiIvPjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 50%; }
+
+.ui-datepicker-header a > span {
+  display: none; }
+
+.ui-datepicker-title {
+  text-align: center;
+  line-height: 2rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding-bottom: 0.25rem; }
+
+.ui-datepicker-week-col {
+  color: #C8CCD8;
+  font-weight: 400;
+  font-size: 0.75rem; }
+
+.ui-datepicker-month, .ui-datepicker-year {
+  color: #f5f5f5; }
+
+select.ui-datepicker-month, select.ui-datepicker-year {
+  padding: 7px;
+  border-radius: 5px;
+  width: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f5f5;
+  border-style: none; }
+  select.ui-datepicker-month option, select.ui-datepicker-year option {
+    background: #0a061a;
+    color: #f5f5f5;
+    border-radius: 0px;
+    padding: 5px; }
+
+select.ui-datepicker-month {
+  margin-right: 10px; }
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial; }
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/ }
+
+.select-selected {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px; }
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent; }
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px; }
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none; }
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #0a061a;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+  max-height: 400px;
+  overflow-y: auto; }
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  visibility: hidden;
+  opacity: 0; }
+
+.select-items div:hover, .same-as-selected {
+  background-color: #027eef; }
+
+div.table {
+  font-size: 14px; }
+  div.table div.table-title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    width: 95%;
+    margin: auto;
+    font-size: 18px;
+    color: #C8CCD8;
+    font-weight: bold; }
+  div.table table {
+    width: 95%;
+    margin: auto;
+    border-spacing: 0px;
+    padding-bottom: 10px; }
+  div.table thead {
+    color: #C8CCD8; }
+    div.table thead tr th {
+      border: 1px solid #383c48;
+      padding: 5px;
+      border-bottom: 0px;
+      border-right: 0px; }
+      div.table thead tr th:last-child {
+        border-right: 1px solid #383c48; }
+  div.table tbody {
+    color: #f5f5f5; }
+    div.table tbody tr td {
+      border: 1px solid #383c48;
+      padding: 5px;
+      border-right: 0px;
+      border-bottom: 0px; }
+      div.table tbody tr td:last-child {
+        border-right: 1px solid #383c48; }
+    div.table tbody tr:last-child td {
+      border-bottom: 1px solid #383c48; }
+
+div.loader {
+  border: 8px solid #f5f5f5;
+  border-radius: 50%;
+  border-top: 8px solid #027eef;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  div.loader.secondary {
+    border-top: 8px solid #434552; }
+  div.loader.success {
+    border-top: 8px solid #018511; }
+  div.loader.warning {
+    border-top: 8px solid #eb9b34; }
+  div.loader.danger {
+    border-top: 8px solid #9c0000; }
+  div.loader.multi-color {
+    border-top: 8px solid #027eef;
+    border-right: 8px solid #434552;
+    border-bottom: 8x solid #0a061a;
+    border-left: 8px solid #018511; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 main.main-container {
   background-image: linear-gradient(#383c48, #0a061a);
   min-height: 100vh;
@@ -319,7 +751,8 @@ main.main-container {
   padding-bottom: 60px;
   padding-left: 80px;
   padding-top: 20px;
-  padding-right: 20px; }
+  padding-right: 20px;
+  overflow: hidden; }
   main.main-container div.background-image {
     position: absolute;
     opacity: 0.05;
